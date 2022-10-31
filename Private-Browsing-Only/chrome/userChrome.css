@@ -1,0 +1,357 @@
+/*================== Gruvbox Theme for Firefox Private Browsing ==================
+Author: kmason
+Based on the color scheme of calvinchd's Gruvbox Dark Firefox Theme - https://gitlab.com/calvinchd/gruvbox-dark-firefox-theme
+*/
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+:root {
+  --background: #1d2021;
+  --secondary: #282828;
+  --foreground: #EBDBB2;
+  
+  --orange-highlight: #fe8019;
+  --sound-border: #68217A;
+  
+  --separator: #665e54;
+  
+  --tab: var(--background);
+  --tab-btn: var(--tab-inactive);
+  --tab-inactive: var(--secondary);
+  --tab-btn-inactive: var(--tab-inactive);
+  --tab-hover: #32302f;
+  --tab-btn-hover: #3C3836;
+  --toolbar-btn-hover: #49463f;
+  
+  --url-bar: #3C3836;
+  --url-focus: #504945;
+  --url-bar-item-hover: #6a6257;
+  
+  --sidebar: #3C3836;
+  --sidebar-button-hover: #5A544B;
+  --sidebar-highlight: #458588;
+}
+
+#main-window[privatebrowsingmode="temporary"] {
+  --toolbar-bgcolor: var(--secondary) !important;
+}
+
+/*
+SEARCH AND POPUPS/MENUS
+*/
+
+#main-window[privatebrowsingmode="temporary"] .panel-arrowcontainer {
+  background-color: var(--secondary) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #PopupAutoComplete,
+#main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete
+{
+  background-color: var(--url-focus) !important;
+  color: var(--foreground) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] panelview {
+  background-color: var(--sidebar) !important;
+  color: var(--foreground) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] panelview toolbarbutton.subviewbutton:hover {
+  background-color: var(--sidebar-button-hover) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] panel[type="autocomplete-richlistbox"] {
+  --panel-background: none !important;
+  border-radius: 4px !important;
+  color: var(--foreground) !important;
+}
+
+/*
+ _____ ___   ___  _    ___   _   ___
+|_   _/ _ \ / _ \| |  | _ ) /_\ | _ \
+  | || (_) | (_) | |__| _ \/ _ \|   /
+  |_| \___/ \___/|____|___/_/ \_\_|\_\
+
+*/
+
+#main-window[privatebrowsingmode="temporary"] toolbarseparator,
+#main-window[privatebrowsingmode="temporary"] menuseparator
+{
+  border-color: var(--separator) !important;
+  border-image: none !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] toolbar {
+  background-color: var(--secondary);
+}
+
+#main-window[privatebrowsingmode="temporary"] toolbar#TabsToolbar {
+  background-color: var(--background);
+}
+#main-window[privatebrowsingmode="temporary"] toolbar#TabsToolbar:-moz-window-inactive {
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #titlebar,
+#main-window[privatebrowsingmode="temporary"] #titlebar-spacer,
+#main-window[privatebrowsingmode="temporary"] #titlebar-buttonbox-container
+{
+  background-color: var(--background) !important;
+  border: none !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #navigator-toolbox {
+  --tabs-border-color: var(--orange-highlight) !important;
+}
+
+/* Remove border under navbar */
+#main-window[privatebrowsingmode="temporary"] #navigator-toolbox::after {
+  border-bottom: 0px !important;
+}
+
+/* remove some borders */
+#main-window[privatebrowsingmode="temporary"] #navigator-toolbox {
+  border: none !important;
+}
+
+/* 
+ _   _ ___  _    ___   _   ___
+| | | | _ \| |  | _ ) /_\ | _ \
+| |_| |   /| |__| _ \/ _ \|   /
+ \___/|_|\_\____|___/_/ \_\_|\_\
+
+*/
+
+#main-window[privatebrowsingmode="temporary"] #urlbar,
+#main-window[privatebrowsingmode="temporary"] #searchbar
+{
+	box-shadow: none !important;
+	border: none !important;
+  border-radius: 4px;
+	color : var(--foreground) !important;
+  background-color: var(--url-bar) !important;
+  --autocomplete-popup-separator-color: var(--separator) !important;
+} 
+
+#main-window[privatebrowsingmode="temporary"] #urlbar-input,
+#main-window[privatebrowsingmode="temporary"] #urlbar-input-container
+{
+  color: var(--foreground) !important;
+  background-color: var(--url-bar) !important;
+  text-align: center !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #urlbar:not([open]) #urlbar-input-container:focus-within,
+#main-window[privatebrowsingmode="temporary"] #searchbar:focus-within 
+{
+	border: 2px solid var(--orange-highlight) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #urlbar:focus-within,
+#main-window[privatebrowsingmode="temporary"] #urlbar[open],
+#main-window[privatebrowsingmode="temporary"] #urlbar[open] #urlbar-input-container,
+#main-window[privatebrowsingmode="temporary"] #urlbar[open] #urlbar-input,
+#main-window[privatebrowsingmode="temporary"] #urlbar-input-container:focus-within,
+#main-window[privatebrowsingmode="temporary"] #urlbar-input:focus,
+#main-window[privatebrowsingmode="temporary"] #urlbar-background,
+#main-window[privatebrowsingmode="temporary"] .urlbarView,
+#main-window[privatebrowsingmode="temporary"] #searchbar:focus-within,
+menupop
+{
+  background-color: var(--url-focus) !important;
+} 
+#main-window[privatebrowsingmode="temporary"] #searchbar:focus-within {
+  outline: none !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] :is(panel, menupopup)::part(content) {
+  background: none !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] .urlbarView button:hover,
+#main-window[privatebrowsingmode="temporary"] #searchbar button:hover,
+#main-window[privatebrowsingmode="temporary"] .urlbarView-row:hover .urlbarView-row-inner,
+#main-window[privatebrowsingmode="temporary"] .search-autocomplete-richlistbox-popup .autocomplete-richlistitem:hover
+{
+	background-color: var(--url-bar-item-hover) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] .urlbarView-row[type="switchtab"] > span{
+  color: var(--orange-highlight) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete .autocomplete-richlistitem[selected],
+#main-window[privatebrowsingmode="temporary"] .searchbar-engine-one-off-item[selected],
+#main-window[privatebrowsingmode="temporary"] .urlbarView-row[selected],
+#main-window[privatebrowsingmode="temporary"] .urlbarView-row[aria-selected="true"],
+#main-window[privatebrowsingmode="temporary"] .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner,
+#main-window[privatebrowsingmode="temporary"] .urlbarView-row-inner[selected]
+{
+  color: var(--foreground) !important;
+	background-color: var(--sidebar-highlight) !important;
+  border-radius: 4px !important;
+}
+
+/* 
+BOOKMARKS BAR
+*/
+
+#main-window[privatebrowsingmode="temporary"] #PersonalToolbar {
+  background-color: var(--secondary) !important;
+}
+
+/*
+  _____ _   ___ ___
+ |_   _/_\ | _ ) __|
+   | |/ _ \| _ \__ \
+   |_/_/ \_\___/___/
+
+*/
+#main-window[privatebrowsingmode="temporary"] .tab-background[selected="true"] {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+#main-window[privatebrowsingmode="temporary"] .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){
+  background-color: transparent !important;
+}
+
+.tabbrowser-tab[soundplaying="true"] .tab-content {
+  border: 1px solid var(--sound-border) !important;
+}
+#main-window[privatebrowsingmode="temporary"] .tab-content[selected="true"] {
+  border-color: var(--orange-highlight) !important;
+  --sound-border: var(--orange-highlight) !important;
+}
+#main-window[privatebrowsingmode="temporary"] .tab-text {
+  color: var(--foreground);
+}
+
+#main-window[privatebrowsingmode="temporary"] tab,
+#main-window[privatebrowsingmode="temporary"] #tabbrowser-tabs
+{
+  background-color: var(--background) !important;
+  color : var(--foreground) !important;
+}
+#main-window[privatebrowsingmode="temporary"] tab:-moz-window-inactive,
+#main-window[privatebrowsingmode="temporary"] #tabbrowser-tabs:-moz-window-inactive,
+#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target
+{
+  background-color: var(--secondary) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] .tabbrowser-tab[selected]{ 
+  opacity: 1;
+}
+
+#main-window[privatebrowsingmode="temporary"] .tab-loading-burst {
+  background-color: inherit;
+}
+
+#main-window[privatebrowsingmode="temporary"] .tab-content
+{
+  border-radius: 4px;
+  margin: 5px 0px 5px 0px !important;
+  border: 1px solid transparent !important;
+}
+#main-window[privatebrowsingmode="temporary"] .tab-content[selected="true"]
+{
+  background-color: var(--secondary) !important;
+  color : var(--foreground) !important;
+  border: 1px solid var(--orange-highlight) !important;
+}
+#main-window[privatebrowsingmode="temporary"] .tab-content:not([selected="true"]):hover { 
+  background-color: var(--tab-hover) !important; 
+}
+
+/*
+   ___ _____ ___  _  ___
+  | _ )_   _|   \| |/ __|
+  | _ \ | | | |\ | |\__ \
+  |___/ |_| |_| \__|/___/
+
+*/
+
+/* 
+Toolbar buttons 
+*/
+
+#main-window[privatebrowsingmode="temporary"] toolbarbutton {
+  fill: var(--foreground) !important;
+  background-color: transparent !important;
+}
+
+/* 
+TAB BAR BUTTONS
+*/
+
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar toolbarbutton {
+  border-radius: 4px;
+  border: 1px solid transparent !important;
+}
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar toolbarbutton:-moz-window-inactive {
+  opacity: 0.7 !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #alltabs-button > .toolbarbutton-badge-stack,
+#main-window[privatebrowsingmode="temporary"] #tabs-newtab-button > .toolbarbutton-icon {
+  background-image: none;
+  border-radius: 6px;
+}
+#main-window[privatebrowsingmode="temporary"] #alltabs-button:hover > .toolbarbutton-badge-stack,
+#main-window[privatebrowsingmode="temporary"] #tabs-newtab-button:hover > .toolbarbutton-icon {
+  background-color: var(--tab-btn-hover) !important;
+}
+
+/* Firefox View button */
+#TabsToolbar #firefox-view-button > .toolbarbutton-icon
+{
+  background-image: none !important;
+  border-radius: 4px;
+}
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
+{
+  background-color: var(--secondary) !important;
+  color : var(--foreground) !important;
+  padding: 9px !important;
+  border: 1px solid var(--orange-highlight) !important;
+}
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar #firefox-view-button:not([open]):hover > .toolbarbutton-icon { 
+  background-color: var(--tab-hover) !important; 
+}
+
+/* 
+MIDDLE BAR (url bar) BUTTONS 
+*/
+
+#main-window[privatebrowsingmode="temporary"] #nav-bar toolbarbutton > .toolbarbutton-icon,
+#main-window[privatebrowsingmode="temporary"] #nav-bar toolbarbutton > .toolbarbutton-badge-stack {
+  border-radius: 6px;
+}
+#main-window[privatebrowsingmode="temporary"] #nav-bar toolbarbutton:hover > .toolbarbutton-icon,
+#main-window[privatebrowsingmode="temporary"] #nav-bar toolbarbutton:hover > .toolbarbutton-badge-stack {
+  background-color: var(--toolbar-btn-hover) !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #back-button {
+  padding-right: 2px !important;
+  padding-left: 2px !important;
+  margin-left: 6px !important;
+}
+
+/* Hamburger Menu */
+#main-window[privatebrowsingmode="temporary"] #PanelUI-menu-button {
+  background-color: var(--secondary) !important;
+  padding-right: 2px !important;
+  margin-right: 6px !important;
+}
+
+/* 
+BOOKMARK BUTTONS
+*/
+#main-window[privatebrowsingmode="temporary"] #PersonalToolbar toolbarbutton {
+  margin: 3px 0px 3px 3px !important;
+  border-radius: 4px;
+}
+#main-window[privatebrowsingmode="temporary"] #PersonalToolbar toolbarbutton:hover {
+  background-color: var(--toolbar-btn-hover) !important;
+}
+
