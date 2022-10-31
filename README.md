@@ -1,5 +1,5 @@
 # Discrete Gruvfox
-A Gruvbox theme for Firefox that offers "Private Browsing Only" styling.
+A Dark Gruvbox theme for Firefox that offers "Private Browsing Only" styling.
 
 ## Private-Browsing-Only
 This repo contains two copies of the theme - one that modifies your entire browser profile, and one that only applies in Private Browsing windows.
@@ -16,4 +16,6 @@ More info: http://kb.mozillazine.org/index.php?title=UserChrome.css&printable=ye
 <br>
 
 ### Credit
+Created by Kenny Mason
+
 Based on colors from Calvin's Gruvbox Dark Firefox Theme - https://gitlab.com/calvinchd/gruvbox-dark-firefox-theme
