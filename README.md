@@ -13,5 +13,7 @@ These need to be added to a `chrome` folder in your local profile directory.
 
 More info: http://kb.mozillazine.org/index.php?title=UserChrome.css&printable=yes
 
-#### Credit
+
+
+### Credit
 Based on colors from Calvin's Gruvbox Dark Firefox Theme - https://gitlab.com/calvinchd/gruvbox-dark-firefox-theme
