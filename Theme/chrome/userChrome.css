@@ -212,8 +212,8 @@ BOOKMARKS BAR
   background-color: transparent !important;
 }
 
-.tabbrowser-tab[soundplaying="true"] .tab-content {
-  border: 1px solid var(--sound-border) !important;
+.tabbrowser-tab[soundplaying="true"] {
+  --lwt-tab-line-color: var(--sound-border) !important;
 }
 .tab-content[selected="true"] {
   border-color: var(--orange-highlight) !important;
